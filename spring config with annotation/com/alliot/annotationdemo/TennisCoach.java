@@ -6,23 +6,40 @@ import org.springframework.stereotype.Component;
 @Component //default bean id creation: same name as class with 1st letter lowerCase
 public class TennisCoach implements Coach {
 	
+	@Autowired                 //field auto-wired injection. No need of setter method
 	private FortuneService fortuneService;
 	
-	@Autowired                 //constructor injection with Auto-wired annotation 
-	public TennisCoach(FortuneService theFortuneService) {
-		fortuneService = theFortuneService;
-	}
+//	@Autowired                 //constructor injection with Auto-wired annotation 
+//	public TennisCoach(FortuneService theFortuneService) {
+//		fortuneService = theFortuneService;
+//	}
 
 	@Override
 	public String getDailyWorkout() {
 		
-		return "Tennis Coach says: Practice your backhand volley..        (by annotation)";
+		return "Tennis Coach says: Practice your backhand volley..        ( ioc by annotation)";
 	}
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
+		
 		return fortuneService.getFortune() ;
 	}
+	
+	//setter injection by auto-wired annotation/////////////////////////
+	//define default constructor
+	public TennisCoach() {
+		System.out.println(">>Inside  default constructor..");
+	}
+
+	
+	
+	//define setter method for injecting
+//	@Autowired
+//	public void setFortuneService(FortuneService fortuneService) {
+//		System.out.println(">>Inside  setFortuneService ..(di: setter method by autowired annotation)");
+//		this.fortuneService = fortuneService;
+//	}
+	
 
 }

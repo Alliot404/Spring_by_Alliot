@@ -24,7 +24,7 @@ public class AnnotationDemoApp {
 		System.out.println(theCoach.getDailyFortune());
 		
 		//close context
-		context.close();
+		context.close();  
 
 	}
 

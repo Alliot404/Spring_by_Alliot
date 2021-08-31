@@ -8,7 +8,7 @@ public class HappyFortuneService implements FortuneService {
 	@Override
 	public String getFortune() {
 		
-		return "Fortune Service says: Today is your lucky day..     (dependency injection by annotation & autowired)" ;
+		return "Fortune Service says: Today is your lucky day..     (dependency inejection by  autowired annotation)" ;
 	}
 
 }
