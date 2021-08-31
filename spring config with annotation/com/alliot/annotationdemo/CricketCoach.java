@@ -11,4 +11,10 @@ public class CricketCoach implements Coach {
 		return "Cricket Coach says: practice hard today.....(by annotaion: inversion of control ";
 	}
 
+	@Override
+	public String getDailyFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
