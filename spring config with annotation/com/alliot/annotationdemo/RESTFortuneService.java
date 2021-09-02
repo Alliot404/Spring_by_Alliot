@@ -3,12 +3,12 @@ package com.alliot.annotationdemo;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HappyFortuneService implements FortuneService {
+public class RESTFortuneService implements FortuneService {
 
 	@Override
 	public String getFortune() {
-		
-		return "Fortune Service says: Today is your lucky day..     (dependency inejection by  autowired annotation)" ;
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	@Override

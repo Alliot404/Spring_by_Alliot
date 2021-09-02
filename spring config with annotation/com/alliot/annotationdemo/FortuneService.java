@@ -4,4 +4,6 @@ public interface FortuneService {
 
 	public String getFortune();
 	
+	public String getPractice5Fortune();
+	
 }

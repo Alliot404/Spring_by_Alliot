@@ -13,12 +13,14 @@ public class AnnotationDemoApp {
 		Coach  theCoach = context.getBean("tennisCoach", Coach.class);  
 		//to achieve inversion of control by annotation just change the default bean id as show below commented code
 		
-//		Coach theCricketCoach = context.getBean("cricketCoach", Coach.class);
+		Coach theCricketCoach = context.getBean("cricketCoach", Coach.class);
 		
 		//call the method
 		System.out.println(theCoach.getDailyWorkout());
 		
-//		System.out.println(theCricketCoach.getDailyWorkout());
+		System.out.println(theCricketCoach.getDailyWorkout());
+		
+		System.out.println(theCricketCoach.getPractice5Fortune());
 		
 		//call new method to get dailyFortune
 		System.out.println(theCoach.getDailyFortune());
