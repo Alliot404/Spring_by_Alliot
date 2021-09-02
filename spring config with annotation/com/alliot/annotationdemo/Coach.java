@@ -6,5 +6,8 @@ public interface Coach {
 	
 	public String getDailyFortune();
 	
+	public String getRandomFortune();
+	
 	public String getPractice5Fortune();
+	
 }

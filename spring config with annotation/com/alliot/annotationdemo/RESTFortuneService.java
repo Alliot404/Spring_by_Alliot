@@ -17,4 +17,10 @@ public class RESTFortuneService implements FortuneService {
 		return null;
 	}
 
+	@Override
+	public String getRandomFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

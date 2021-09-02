@@ -2,14 +2,24 @@ package com.alliot.annotationdemo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component //default bean id creation: same name as class with 1st letter lowerCase
+//@Scope("prototype")
 public class TennisCoach implements Coach {
 	
 	@Autowired                 //field auto-wired injection. No need of setter method
-	@Qualifier("randomFortuneService")
+	@Qualifier("happyFortuneService")
 	private FortuneService fortuneService;
+	
+	//setter injection by auto-wired annotation/////////////////////////
+	//define default constructor
+	public TennisCoach() {
+		System.out.println(">>Inside  default constructor..");
+	}
+	
+	
 	
 //	@Autowired                 //constructor injection with Auto-wired annotation 
 //	public TennisCoach(FortuneService theFortuneService) {
@@ -28,16 +38,19 @@ public class TennisCoach implements Coach {
 		return fortuneService.getFortune() ;
 	}
 	
-	//setter injection by auto-wired annotation/////////////////////////
-	//define default constructor
-	public TennisCoach() {
-		System.out.println(">>Inside  default constructor..");
-	}
 
 	@Override
 	public String getPractice5Fortune() {
 		// TODO Auto-generated method stub
-		return null;
+		return fortuneService.getPractice5Fortune();
+	}
+
+
+
+	@Override
+	public String getRandomFortune() {
+		// TODO Auto-generated method stub
+		return fortuneService.getRandomFortune();
 	}
 
 	

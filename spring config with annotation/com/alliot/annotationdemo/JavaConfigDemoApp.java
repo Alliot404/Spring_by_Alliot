@@ -1,13 +1,17 @@
 package com.alliot.annotationdemo;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 
-public class AnnotationDemoApp {
+public class JavaConfigDemoApp {
 
 	public static void main(String[] args) {
-		//read spring configuration file
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+		//read spring configuration file with java configuration
+		AnnotationConfigApplicationContext context = new 
+				AnnotationConfigApplicationContext(SportConfig.class);
+		
+		System.out.println("Configuration with java...");
 		
 		//get bean from container
 		Coach  theCoach = context.getBean("tennisCoach", Coach.class);  
@@ -20,20 +24,10 @@ public class AnnotationDemoApp {
 		
 		System.out.println(theCricketCoach.getDailyWorkout());
 		
+		System.out.println(theCricketCoach.getPractice5Fortune());
 		
 		//call new method to get dailyFortune
 		System.out.println(theCoach.getDailyFortune());
-		
-		if(theCoach.getRandomFortune()==null) {
-			System.out.println("@qualifier annotation is added to above happy fortune service so this getRandomFortune is null");
-			System.out.println(theCoach.getRandomFortune());
-		}
-		else {
-			System.out.println("@qualifier annotation is added to getRandomFortune so this getDailyFortune is null");
-			System.out.println(theCoach.getRandomFortune());
-		}
-		
-		System.out.println(theCricketCoach.getPractice5Fortune());
 		
 		//close context
 		context.close();  

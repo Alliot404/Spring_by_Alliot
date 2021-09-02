@@ -17,4 +17,10 @@ public class Practice5Fortune implements FortuneService {
 		return "Practice5: new implementation for fortune with di";
 	}
 
+	@Override
+	public String getRandomFortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

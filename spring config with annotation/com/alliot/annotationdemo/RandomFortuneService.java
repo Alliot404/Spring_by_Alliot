@@ -16,17 +16,23 @@ public class RandomFortuneService implements FortuneService {
 		private Random myRandom = new Random();
 
 	@Override
-	public String getFortune() {
+	public String getRandomFortune() {
 		// pick a random string from the array
 				int index = myRandom.nextInt(data.length);
 				
-				String theFortune = data[index];
+				String theRandomFortune = data[index];
 		
-		return theFortune;
+		return theRandomFortune;
 	}
 
 	@Override
 	public String getPractice5Fortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getFortune() {
 		// TODO Auto-generated method stub
 		return null;
 	}

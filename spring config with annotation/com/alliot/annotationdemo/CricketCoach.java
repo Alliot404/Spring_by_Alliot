@@ -27,9 +27,15 @@ public class CricketCoach implements Coach {
 		
 		return practice5Fortune.getPractice5Fortune() ;
 	}
-	
-	public CricketCoach() {
-		System.out.println(">>Inside  default constructor..");
+
+	@Override
+	public String getRandomFortune() {
+		// TODO Auto-generated method stub
+		return null;
 	}
+	
+//	public CricketCoach() {
+//		System.out.println(">>Inside  default constructor..");
+//	}
 
 }
