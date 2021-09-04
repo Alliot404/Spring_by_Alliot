@@ -23,4 +23,10 @@ public class DatabaseFortuneService implements FortuneService {
 		return null;
 	}
 
+	@Override
+	public String getIOCandDiPractice7Fortune() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

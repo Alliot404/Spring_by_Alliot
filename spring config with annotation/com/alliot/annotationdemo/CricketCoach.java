@@ -33,6 +33,12 @@ public class CricketCoach implements Coach {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+	@Override
+	public String getIOCandDiPractice7() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 //	public CricketCoach() {
 //		System.out.println(">>Inside  default constructor..");

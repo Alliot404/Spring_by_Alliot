@@ -53,6 +53,14 @@ public class TennisCoach implements Coach {
 		return fortuneService.getRandomFortune();
 	}
 
+
+
+	@Override
+	public String getIOCandDiPractice7() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 	
 	//define setter method for injecting

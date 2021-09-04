@@ -52,4 +52,10 @@ public class SwimCoach implements Coach {
 		return null;
 	}
 
+	@Override
+	public String getIOCandDiPractice7() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }

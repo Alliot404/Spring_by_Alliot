@@ -8,4 +8,8 @@ public interface FortuneService {
 	
 	public String getPractice5Fortune();
 	
+	//practice7
+	
+	public String getIOCandDiPractice7Fortune();
+	
 }
